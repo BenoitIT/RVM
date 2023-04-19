@@ -1,8 +1,10 @@
 import express from 'express';
 import db from './database/models/index';
+import docs from './documentation/index'
 import i18next from 'i18next';
 import Backend from 'i18next-fs-backend';
 import middleware from 'i18next-http-middleware';
+import { authRoutes } from './Routes/authRoutes';
 const app = express();
 //configuring multiple languages
 i18next
@@ -22,6 +24,9 @@ i18next
 //configuring  app middlewares
 app.use(express.json());
 app.use(middleware.handle(i18next));
+//directing app to the routes
+app.use('/api/rvm/users',authRoutes);
+app.use(docs);
 //start the app
  const PORT=process.env.PORT||4000;
 db.sequelize.sync({ force: false }).then(async () => {
