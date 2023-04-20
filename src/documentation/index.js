@@ -1,5 +1,7 @@
 import swagger from 'swagger-ui-express';
 import user from './user';
+import clients from './clients';
+import login from './login';
 import admin from './admin';
 import schemas from './schema';
 import { Router } from 'express';
@@ -8,7 +10,7 @@ const swaggerDocRouter = Router();
 const options = {
   openapi: '3.0.3',
   info: {
-    title: 'ecommerce-app-legends-bn-',
+    title: 'RVM Services APIs',
     version: '1.0.0',
     description:
       'The API documentation of all endpoint RVM web application',
@@ -50,7 +52,9 @@ const options = {
   },
   paths: { 
     ...user,
-    ...admin
+    ...admin,
+    ...clients,
+    ...login
    },
 };
 
