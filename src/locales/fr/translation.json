@@ -5,5 +5,7 @@
     "registered":"Vous vous êtes inscrit aux services de recyclage!",
     "user_exixted_error":"Utilisateur existe déjà",
     "listClient":"Liste des clients RVM",
-    "noClient":"Aucun client trouvé"
+    "noClient":"Aucun client trouvé",
+    "incorrectPhoneNumber":"un numéro de téléphone doit avoir 10 chiffres",
+    "emailUsed":"Cet e-mail a déjà été utilisé"
 }

@@ -5,6 +5,7 @@
     "registered":"konti yanyu yamaze gufungurwa!",
     "user_exixted_error":"mwari mwariyandikije mukoresheje iyo nimoro ya telefone",
     "listClient":"urutonde rw'abakoresha RVM",
-    "noClient":"nta mukiriya uri muri sisitemu"
-    
+    "noClient":"nta mukiriya uri muri sisitemu",
+    "incorrectPhoneNumber":"nimero ya telefoni igomba kuba imibarwa 10",
+    "emailUsed":"imeyili mukoresheje yari isanzwe ikoreshwa"
 }
