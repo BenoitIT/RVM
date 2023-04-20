@@ -3,5 +3,7 @@
     "success":  "succès",
     "fail": "échoué",
     "registered":"Vous vous êtes inscrit aux services de recyclage!",
-    "user_exixted_error":"Utilisateur existe déjà"
+    "user_exixted_error":"Utilisateur existe déjà",
+    "listClient":"Liste des clients RVM",
+    "noClient":"Aucun client trouvé"
 }

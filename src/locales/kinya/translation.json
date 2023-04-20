@@ -3,5 +3,8 @@
     "success": "byakunze",
     "fail": "ntibyabashije gukunda",
     "registered":"konti yanyu yamaze gufungurwa!",
-    "user_exixted_error":"mwari mwariyandikije mukoresheje iyo nimoro ya telefone"
+    "user_exixted_error":"mwari mwariyandikije mukoresheje iyo nimoro ya telefone",
+    "listClient":"urutonde rw'abakoresha RVM",
+    "noClient":"nta mukiriya uri muri sisitemu"
+    
 }
