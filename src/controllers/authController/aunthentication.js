@@ -5,6 +5,7 @@ import {
   comparePassword,
   signToken,
 } from "../../utilities/validations/handlingPasswordVerification";
+import { payLoad } from "../../utilities/BetterCodingPractice/tokenPayload";
 export const authenticate = asyncWrapper(async (req, res) => {
   const { phoneNumber, password } = req.body;
   const FillingError = checkEmptyFields(req, res);
@@ -21,13 +22,7 @@ export const authenticate = asyncWrapper(async (req, res) => {
     const isPasswordCorrect = await comparePassword(password, user.password);
     if (!isPasswordCorrect)
       return res.status(403).json({ status:req.t("fail"),message:req.t("incorrectPassword") });
-    const payload = {
-      firstName: user.firstName,
-      Nationality: user.Nationality,
-      phoneNumber: user.phoneNumber,
-      role: user.role,
-    };
-    const accessToken = await signToken(payload);
+    const accessToken = await signToken(payLoad(user));
     res
       .status(200)
       .json({

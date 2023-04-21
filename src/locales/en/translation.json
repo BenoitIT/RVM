@@ -5,6 +5,7 @@
     "registered":"you have registered to recycling services!",
     "user_exixted_error":"User already exists",
     "listClient":"List of RVM clients",
-    "noClient":"No client found"
-    
+    "noClient":"No client found",
+    "incorrectPhoneNumber":"phone number must be 10 numbers",
+    "emailUsed":"This email has already been used"
 }
