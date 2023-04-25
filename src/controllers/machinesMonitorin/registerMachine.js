@@ -4,6 +4,7 @@ import { checkEmptyFields } from "../../utilities/validations/handlingEmptyField
 import {
   checkmachineDeplucation,
   checkExistance,
+  checkOPExistance
 } from "../../utilities/BetterCodingPractice/validateNumber";
 export const registerNewMachine= asyncWrapper(async (req, res) => {
   const { Location, zone, status, operatorId, gps_longitude, gps_latitude } =
@@ -25,6 +26,13 @@ export const registerNewMachine= asyncWrapper(async (req, res) => {
       res
     );
     if (checkZoneExistance) return;
+    const Operator = await checkOPExistance(
+      db.Machines,
+      operatorId,
+      req,
+      res
+    );
+    if (Operator) return;
     const newMachine = await db.Machines.create({
         Location, zone, status, operatorId, gps_longitude, gps_latitude
     });

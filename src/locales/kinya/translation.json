@@ -13,5 +13,10 @@
     "nationaiIDexist":"nimero yindangamuntu mwakoresheje yakoreshejwe muriyi sisitemo",
     "incorrectIDNumber":"nimero yindangamuntu mwakoresheje ntiyuzuye imibarwa 16",
     "machineregistered":"imashini nshya yongewe muri sisistemu",
-    "longitudeUsed":"hari RVM mashine ikoresha gps mushyizemo"
+    "longitudeUsed":"hari RVM mashine ikoresha gps mushyizemo",
+    "noMachine":"nta machine nimwe irashyirwa muri sisitemu !",
+    "listMachine":"urutonde rw'imashine ziri zashyizwe mukazi",
+    "operatorExist":"uyu mukozi uhisemo afite imashine ari kwitaho",
+    "noOperator":"no mukozi wita kuri RVM wanditse muri sisistemu",
+    "listOfOperators":"urutondo rw'abakozi bacunga RVM"
 }

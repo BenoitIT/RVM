@@ -34,4 +34,30 @@ export default {
           },
         },
       },
+      "/api/rvm/machines/list-operators" : {
+        get: {
+          tags: ["Machine"],
+          description: "all registered operators",
+          security: [],
+          parameters: [],
+          requestBody: {},
+          responses: {
+            200: {
+              description: "successfully",
+            },
+            204: {
+              description: "No Content related to the ID provided",
+            },
+            401: {
+              description: "User Not Authorized",
+            },
+            404: {
+              description: "Product doesn't exist!",
+            },
+            500: {
+              description: "Internal Server Error",
+            },
+          },
+        },
+      },
     }
