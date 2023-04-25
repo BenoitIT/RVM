@@ -5,6 +5,7 @@ import i18next from 'i18next';
 import Backend from 'i18next-fs-backend';
 import middleware from 'i18next-http-middleware';
 import { authRoutes } from './Routes/authRoutes';
+import { machineRoutes } from './Routes/machine';
 import { googleAuth } from './Routes/googleAuth';
 const app = express();
 //configuring multiple languages
@@ -27,6 +28,7 @@ app.use(express.json());
 app.use(middleware.handle(i18next));
 //directing app to the routes
 app.use('/api/rvm/users',authRoutes);
+app.use('/api/rvm/machines',machineRoutes);
 app.use(googleAuth);
 app.use(docs);
 //start the app

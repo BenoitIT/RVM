@@ -3,9 +3,15 @@
     "success": "byakunze",
     "fail": "ntibyabashije gukunda",
     "registered":"konti yanyu yamaze gufungurwa!",
+    "operatorRegistered":"kwandika umukozi mushya byagenze neza!",
     "user_exixted_error":"mwari mwariyandikije mukoresheje iyo nimoro ya telefone",
     "listClient":"urutonde rw'abakoresha RVM",
     "noClient":"nta mukiriya uri muri sisitemu",
     "incorrectPhoneNumber":"nimero ya telefoni igomba kuba imibarwa 10",
-    "emailUsed":"imeyili mukoresheje yari isanzwe ikoreshwa"
+    "emailUsed":"mukoresheje yari isanzwe ikoreshwa",
+    "zonexist":"aka gace gasanzwe mo indi mashini",
+    "nationaiIDexist":"nimero yindangamuntu mwakoresheje yakoreshejwe muriyi sisitemo",
+    "incorrectIDNumber":"nimero yindangamuntu mwakoresheje ntiyuzuye imibarwa 16",
+    "machineregistered":"imashini nshya yongewe muri sisistemu",
+    "longitudeUsed":"hari RVM mashine ikoresha gps mushyizemo"
 }

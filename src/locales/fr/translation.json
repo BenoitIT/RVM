@@ -3,9 +3,15 @@
     "success":  "succès",
     "fail": "échoué",
     "registered":"Vous vous êtes inscrit aux services de recyclage!",
+    "operatorRegistered":"Un nouvel opérateur s'est inscrit aux services de recyclage!",
     "user_exixted_error":"Utilisateur existe déjà",
     "listClient":"Liste des clients RVM",
     "noClient":"Aucun client trouvé",
     "incorrectPhoneNumber":"un numéro de téléphone doit avoir 10 chiffres",
-    "emailUsed":"Cet e-mail a déjà été utilisé"
+    "emailUsed":"cet e-mail a été utilisé",
+    "zonexist":"Il y a déjà un RVM dans cette zone.",
+    "nationaiIDexist":"Ce numéro d'identité national a été utilisé",
+    "incorrectIDNumber":"Le numéro d'identification national n'est pas complet",
+    "machineregistered":"Une nouvelle machine a été enregistrée.",
+    "longitudeUsed":"Il y a un RVM à ces coordonnées GPS"
 }
