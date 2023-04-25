@@ -18,5 +18,7 @@
     "listMachine":"urutonde rw'imashine ziri zashyizwe mukazi",
     "operatorExist":"uyu mukozi uhisemo afite imashine ari kwitaho",
     "noOperator":"no mukozi wita kuri RVM wanditse muri sisistemu",
-    "listOfOperators":"urutondo rw'abakozi bacunga RVM"
+    "listOfOperators":"urutondo rw'abakozi bacunga RVM",
+    "updateSucess":"ivugurura ryagenze neza",
+    "deleteSucess":"gusiba byagenze neza!"
 }

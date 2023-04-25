@@ -62,4 +62,119 @@ export default {
           },
         },
       },
+
+    '/api/rvm/machines/machine/{id}/delete': {
+      delete: {
+        tags: ['Machine'],
+        parameters: [
+          {
+            name: 'id',
+            in: 'path',
+            description: 'product id',
+            required: true,
+            type: 'integer',
+            example: '31',
+          },
+        ],
+        responses: {
+          200: {
+            description: 'OK',
+          },
+          500: {
+            description: 'Internal Server Error',
+          },
+          404: {
+            description: 'not found',
+          },
+          401: {
+            description: "Not Authorized",
+          },
+          403: {
+            description: "Forbidden Access",
+          },
+        },
+      },
+    },
+    '/api/rvm/machines/machine/{id}': {
+      get: {
+        tags: ['Machine'],
+        parameters: [
+          {
+            name: 'id',
+            in: 'path',
+            description: 'product id',
+            required: true,
+            type: 'integer',
+            example: '31',
+          },
+        ],
+        responses: {
+          200: {
+            description: 'OK',
+          },
+          500: {
+            description: 'Internal Server Error',
+          },
+          404: {
+            description: 'not found',
+          },
+          401: {
+            description: "Not Authorized",
+          },
+          403: {
+            description: "Forbidden Access",
+          },
+        },
+      },
+    },
+    '/api/rvm/machines/machine/{id}/update': {
+      put: {
+        tags: ['Machine'],
+        parameters: [
+          {
+            name: 'id',
+            in: 'path',
+            description: 'product id',
+            required: true,
+            type: 'integer',
+            example: '31',
+          },
+        ],
+        requestBody: {
+          content: {
+            "application/json": {
+              schema: {
+                $ref: "#/components/schemas/Machines",
+              },
+              example: {
+                "Location": "kigali",
+                "zone": "downtown",
+                "operatorId": "1",
+                "status": "active",
+                "gps_longitude": "22.45555",
+                "gps_latitude": "22.45555"
+              },
+            },
+          },
+          required: true,
+        },
+        responses: {
+          200: {
+            description: 'OK',
+          },
+          500: {
+            description: 'Internal Server Error',
+          },
+          404: {
+            description: 'not found',
+          },
+          401: {
+            description: "Not Authorized",
+          },
+          403: {
+            description: "Forbidden Access",
+          },
+        },
+      },
+    },
     }

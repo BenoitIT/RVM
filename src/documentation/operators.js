@@ -60,4 +60,84 @@ export default {
           },
         },
       },
+      '/api/rvm/machines/operator/{id}': {
+        get: {
+          tags: ['Machine'],
+          parameters: [
+            {
+              name: 'id',
+              in: 'path',
+              description: 'product id',
+              required: true,
+              type: 'integer',
+              example: '31',
+            },
+          ],
+          responses: {
+            200: {
+              description: 'OK',
+            },
+            500: {
+              description: 'Internal Server Error',
+            },
+            404: {
+              description: 'not found',
+            },
+            401: {
+              description: "Not Authorized",
+            },
+            403: {
+              description: "Forbidden Access",
+            },
+          },
+        },
+      },
+      '/api/rvm/machines/operator/{id}/update': {
+        put: {
+          tags: ['Machine'],
+          parameters: [
+            {
+              name: 'id',
+              in: 'path',
+              description: 'product id',
+              required: true,
+              type: 'integer',
+              example: '31',
+            },
+          ],
+          requestBody: {
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Machines",
+                },
+                example: {
+                  "firstName": "david",
+                  "lastName": "mugabo",
+                  "nationalID": "1233837839336389",
+                  "phoneNumber": "1234567890"
+                },
+              },
+            },
+            required: true,
+          },
+          responses: {
+            200: {
+              description: 'OK',
+            },
+            500: {
+              description: 'Internal Server Error',
+            },
+            404: {
+              description: 'not found',
+            },
+            401: {
+              description: "Not Authorized",
+            },
+            403: {
+              description: "Forbidden Access",
+            },
+          },
+        },
+      },
     }

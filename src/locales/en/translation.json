@@ -18,5 +18,7 @@
     "listMachine":"list all machines registered",
     "operatorExist":"this operator is managing onather onother machine",
     "noOperator":"no RVM operator registered!",
-    "listOfOperators":"list all operators registered"
+    "listOfOperators":"list all operators registered",
+    "updateSucess":"updated successfully",
+    "deleteSucess":"deleted successfully"
 }

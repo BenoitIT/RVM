@@ -18,5 +18,7 @@
     "listMachine":"Listez toutes les machines enregistrées.",
     "operatorExist":"Cet opérateur gère une autre machine.",
     "noOperator":"aucun opérateur RVM enregistré !",
-    "listOfOperators":"Listez tous les opérateurs enregistrés"
+    "listOfOperators":"Listez tous les opérateurs enregistrés",
+    "updateSucess":"Mis à jour avec succès",
+    "deleteSucess":"Supprimé avec succès"
 }
