@@ -13,5 +13,10 @@
     "nationaiIDexist":"this national identity number has been used",
     "incorrectIDNumber":"National ID number is not complete",
     "machineregistered":"new machine has been registered",
-    "longitudeUsed":"there is an RVM at those gps cordinates"
+    "longitudeUsed":"there is an RVM at those gps cordinates",
+    "noMachine":"no RVM machine is registered!",
+    "listMachine":"list all machines registered",
+    "operatorExist":"this operator is managing onather onother machine",
+    "noOperator":"no RVM operator registered!",
+    "listOfOperators":"list all operators registered"
 }

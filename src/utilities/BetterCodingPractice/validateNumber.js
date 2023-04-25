@@ -48,6 +48,21 @@ export const checkExistance = async (model, Attribute, req, res) => {
     return;
   }
 };
+export const checkOPExistance = async (model, Attribute, req, res) => {
+  const attributeThere = await model.findOne({
+    where: {
+      operatorId:Attribute,
+    },
+  });
+  if (attributeThere) {
+    return res.status(409).json({
+      status: req.t("fail"),
+      message:req.t("operatorExist"),
+    });
+  } else {
+    return;
+  }
+};
 export const checkIDDeplucation = async (
   model,
   phoneNumber,
