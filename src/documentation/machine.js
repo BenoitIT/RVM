@@ -177,4 +177,62 @@ export default {
         },
       },
     },
+    "/api/rvm/machines/locations" : {
+      get: {
+        tags: ["RVMLocations"],
+        description: "all registered machines location",
+        security: [],
+        parameters: [],
+        requestBody: {},
+        responses: {
+          200: {
+            description: "successfully",
+          },
+          204: {
+            description: "No Content related to the ID provided",
+          },
+          401: {
+            description: "User Not Authorized",
+          },
+          404: {
+            description: "Product doesn't exist!",
+          },
+          500: {
+            description: "Internal Server Error",
+          },
+        },
+      },
+    },
+    '/api/rvm/machines/{Location}/zones': {
+      get: {
+        tags: ['RVMLocations'],
+        parameters: [
+          {
+            name: 'Location',
+            in: 'path',
+            description: 'location name',
+            required: true,
+            type: 'string',
+            example: 'Kigali',
+          },
+        ],
+        responses: {
+          200: {
+            description: 'OK',
+          },
+          500: {
+            description: 'Internal Server Error',
+          },
+          404: {
+            description: 'not found',
+          },
+          401: {
+            description: "Not Authorized",
+          },
+          403: {
+            description: "Forbidden Access",
+          },
+        },
+      },
+    },
     }
