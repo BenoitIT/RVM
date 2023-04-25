@@ -3,6 +3,8 @@ import user from './user';
 import clients from './clients';
 import login from './login';
 import admin from './admin';
+import operators from './operators';
+import machine from './machine';
 import schemas from './schema';
 import { Router } from 'express';
 const { serve, setup } = swagger;
@@ -54,7 +56,9 @@ const options = {
     ...user,
     ...admin,
     ...clients,
-    ...login
+    ...login,
+    ...operators,
+    ...machine
    },
 };
 
