@@ -6,6 +6,7 @@ import admin from './admin';
 import operators from './operators';
 import machine from './machine';
 import schemas from './schema';
+import Recylables from './Recylables';
 import { Router } from 'express';
 const { serve, setup } = swagger;
 const swaggerDocRouter = Router();
@@ -58,7 +59,8 @@ const options = {
     ...clients,
     ...login,
     ...operators,
-    ...machine
+    ...machine,
+    ...Recylables
    },
 };
 

@@ -20,5 +20,10 @@
     "noOperator":"no mukozi wita kuri RVM wanditse muri sisistemu",
     "listOfOperators":"urutondo rw'abakozi bacunga RVM",
     "updateSucess":"ivugurura ryagenze neza",
-    "deleteSucess":"gusiba byagenze neza!"
+    "deleteSucess":"gusiba byagenze neza!",
+    "contributions":"Amakuru agendanye nibyakozwe",
+    "Nocontribution":"ntabwo urakoresha RVM",
+    "notFound":"ntacyabonetse",
+    "removed":"gusiba byagenze neza",
+    "hasRecycled":"yashyizwe mumashine"
 }

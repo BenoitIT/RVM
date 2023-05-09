@@ -20,5 +20,10 @@
     "noOperator":"no RVM operator registered!",
     "listOfOperators":"list all operators registered",
     "updateSucess":"updated successfully",
-    "deleteSucess":"deleted successfully"
+    "deleteSucess":"deleted successfully",
+    "contributions":"MY CONTRIBUTION STATS",
+    "Nocontribution":"NO RECYCLING YOU HAVE EVER MADE",
+    "notFound":"NO RECYCLING FOUND",
+    "removed":"STAT removed successfully",
+    "hasRecycled":"got recycled"
 }
