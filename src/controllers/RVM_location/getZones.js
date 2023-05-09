@@ -1,9 +1,10 @@
 import db from "../../database/models";
+import { sequelize } from "../../database/models";
 import { asyncWrapper } from "../../utilities/BetterCodingPractice/handlingTryCatch";
 export const getZoneBylocation = asyncWrapper(async (req, res) => {
     const { Location } = req.params;
     const ZonesList= await db.Machines.findAll({
-        attributes: ['zone'],
+        attributes: [[sequelize.fn('DISTINCT', sequelize.col('zone')), 'zone']],
       where: {
         Location
       },

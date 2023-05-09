@@ -3,7 +3,11 @@ export default {
         post: {
           tags: ["Machine"],
           description: "machine registeration",
-          security: [],
+          security: [
+            {
+              bearerAuth: [],
+            },
+          ],
           parameters: [],
           requestBody: {
             content: {
@@ -40,7 +44,11 @@ export default {
         get: {
           tags: ["Machine"],
           description: "all registered machines",
-          security: [],
+          security: [
+            {
+              bearerAuth: [],
+            },
+          ],
           parameters: [],
           requestBody: {},
           responses: {
@@ -66,6 +74,11 @@ export default {
     '/api/rvm/machines/machine/{id}/delete': {
       delete: {
         tags: ['Machine'],
+        security: [
+          {
+            bearerAuth: [],
+          },
+        ],
         parameters: [
           {
             name: 'id',
@@ -130,6 +143,11 @@ export default {
     '/api/rvm/machines/machine/{id}/update': {
       put: {
         tags: ['Machine'],
+        security: [
+          {
+            bearerAuth: [],
+          },
+        ],
         parameters: [
           {
             name: 'id',

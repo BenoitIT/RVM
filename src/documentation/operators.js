@@ -3,7 +3,11 @@ export default {
         post: {
           tags: ["Machine"],
           description: "operator registeration",
-          security: [],
+          security: [
+            {
+              bearerAuth: [],
+            },
+          ],
           parameters: [],
           requestBody: {
             content: {
@@ -38,7 +42,11 @@ export default {
         get: {
           tags: ["Machine"],
           description: "all registered operators",
-          security: [],
+          security: [
+            {
+              bearerAuth: [],
+            },
+          ],
           parameters: [],
           requestBody: {},
           responses: {
@@ -63,6 +71,11 @@ export default {
       '/api/rvm/machines/operator/{id}': {
         get: {
           tags: ['Machine'],
+          security: [
+            {
+              bearerAuth: [],
+            },
+          ],
           parameters: [
             {
               name: 'id',
@@ -95,6 +108,11 @@ export default {
       '/api/rvm/machines/operator/{id}/update': {
         put: {
           tags: ['Machine'],
+          security: [
+            {
+              bearerAuth: [],
+            },
+          ],
           parameters: [
             {
               name: 'id',

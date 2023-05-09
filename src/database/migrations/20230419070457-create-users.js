@@ -22,7 +22,7 @@ module.exports = {
         unique: true,
       },
       phoneNumber: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.BIGINT,
         allowNull: false,
         unique: true,
       },

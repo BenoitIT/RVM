@@ -91,4 +91,33 @@ export default {
       },
     },
   },
+  Recyclables: {
+    type: "object",
+    properties: {
+      id: {
+        type: "integer",
+        description: "The auto-generated id ",
+      },
+      location: {
+        type: "string",
+        description: "location name",
+      },
+      bootleType:{
+        type: "string",
+        description: "location name",
+      },
+      zone: {
+        type: "string",
+        description: "zone",
+      },
+      numberOfRecyclables:{
+        type: "integer",
+        description: "number of recyclables",
+      },
+      rewardPerEach: {
+        type: "integer",
+        description: "reward per each item",
+      },
+    },
+  },
 };
