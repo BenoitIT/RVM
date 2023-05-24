@@ -24,6 +24,6 @@ Recycle.delete(
   removeRecyclables
 );
 Recycle.post("/rewards/add", auth(["admin"]), defineRewards);
-Recycle.get("/rewards/list", auth(["admin"]), getAllRewordsInfo);
-Recycle.get("/rewards/list/:bottleType", auth(["admin"]), getSingleRewordInfo);
+Recycle.get("/rewards/list", getAllRewordsInfo);
+Recycle.get("/rewards/list/:bottleType", getSingleRewordInfo);
 Recycle.patch("/rewards/update/:bottleType", auth(["admin"]), updateRewardInfo);
