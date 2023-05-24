@@ -20,7 +20,6 @@ export default {
               "zone":"zone here",
               "bootleType":"CAN",
               "numberOfRecyclables": 2,
-              "rewardPerEach": 30,
             },
           },
         },
@@ -69,7 +68,7 @@ export default {
       },
     },
   },
-  "/api/rvm/recycle//recyclables/{id}": {
+  "/api/rvm/recycle/recyclables/{id}": {
     delete: {
       tags: ["Recyclables"],
       security: [

@@ -104,7 +104,7 @@ export default {
       },
       bootleType:{
         type: "string",
-        description: "location name",
+        description: "type of the bootle",
       },
       zone: {
         type: "string",
@@ -113,6 +113,23 @@ export default {
       numberOfRecyclables:{
         type: "integer",
         description: "number of recyclables",
+      },
+      rewardPerEach: {
+        type: "integer",
+        description: "reward per each item",
+      },
+    },
+  },
+  Rewards: {
+    type: "object",
+    properties: {
+      id: {
+        type: "integer",
+        description: "The auto-generated id ",
+      },
+      bottleType:{
+        type: "string",
+        description: "type of the bootle",
       },
       rewardPerEach: {
         type: "integer",

@@ -6,7 +6,7 @@
     "operatorRegistered":"new operator has registered to recycling services!",
     "user_exixted_error":"User already exists",
     "listClient":"List of RVM clients",
-    "noClient":"No client found",
+    "noClient":"No client with that email found",
     "incorrectPhoneNumber":"phone number must be 10 numbers",
     "emailUsed":" this email has been used",
     "zonexist":"there is RVM already place in this zone",

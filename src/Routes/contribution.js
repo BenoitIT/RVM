@@ -6,6 +6,24 @@ import {
   getMyRecyclingStats,
   removeRecyclables,
 } from "../controllers/RVM_location/Recyclables";
-Recycle.post("/recyclables/add",auth(['client','admin']), saveNewRecyclable);
-Recycle.get("/recyclables/list",auth(['client','admin']), getMyRecyclingStats);
-Recycle.delete("/recyclables/:id", auth(['client','admin']),removeRecyclables);
+import {
+  defineRewards,
+  getAllRewordsInfo,
+  getSingleRewordInfo,
+  updateRewardInfo,
+} from "../controllers/contributions/Rewards";
+Recycle.post("/recyclables/add", auth(["client", "admin"]), saveNewRecyclable);
+Recycle.get(
+  "/recyclables/list",
+  auth(["client", "admin"]),
+  getMyRecyclingStats
+);
+Recycle.delete(
+  "/recyclables/:id",
+  auth(["client", "admin"]),
+  removeRecyclables
+);
+Recycle.post("/rewards/add", auth(["admin"]), defineRewards);
+Recycle.get("/rewards/list", auth(["admin"]), getAllRewordsInfo);
+Recycle.get("/rewards/list/:bottleType", auth(["admin"]), getSingleRewordInfo);
+Recycle.patch("/rewards/update/:bottleType", auth(["admin"]), updateRewardInfo);
