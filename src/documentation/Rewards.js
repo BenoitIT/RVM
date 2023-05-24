@@ -40,11 +40,7 @@ export default {
     get: {
       tags: ["Rewards"],
       description: "rewards list",
-      security: [
-        {
-          bearerAuth: [],
-        },
-      ],
+      security: [],
       parameters: [],
       requestBody: {},
       responses: {
@@ -69,11 +65,7 @@ export default {
   "/api/rvm/recycle/rewards/list/{bottleType}": {
     get: {
       tags: ["Rewards"],
-      security: [
-        {
-          bearerAuth: [],
-        },
-      ],
+      security: [],
       parameters: [
         {
           name: "bottleType",
