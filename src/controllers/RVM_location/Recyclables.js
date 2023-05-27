@@ -18,7 +18,6 @@ export const saveNewRecyclable = asyncWrapper(async (req, res) => {
   if (FillingError) return;
   const totalRewards = rewardPerEach * numberOfRecyclables;
   const isBalanceExist= await db.Balances.findOne({where:{userId}});
-  console.log(isBalanceExist.balance);
   let balances;
   if(isBalanceExist){
     isBalanceExist.balance=isBalanceExist.balance+totalRewards;
