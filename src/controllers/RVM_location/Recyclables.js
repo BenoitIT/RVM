@@ -10,11 +10,26 @@ export const saveNewRecyclable = asyncWrapper(async (req, res) => {
       bottleType: bootleType,
     },
   });
+  if(!reward){
+   return res.status(404).json({status:"fail",message:"could not support that type of of bottle"})
+  } 
   const rewardPerEach = reward.rewardPerEach;
   const FillingError = checkEmptyFields(req, res);
   if (FillingError) return;
   const totalRewards = rewardPerEach * numberOfRecyclables;
-  const newRecyclable = await db.Recyclables.create({
+  const isBalanceExist= await db.Balances.findOne({where:{userId}});
+  console.log(isBalanceExist.balance);
+  let balances;
+  if(isBalanceExist){
+    isBalanceExist.balance=isBalanceExist.balance+totalRewards;
+   balances = await isBalanceExist.save();
+  }else{
+   balances= await db.Balances.create({
+    userId,
+    balance: totalRewards
+  })
+}
+  await db.Recyclables.create({
     Location,
     zone,
     bootleType,
@@ -29,6 +44,7 @@ export const saveNewRecyclable = asyncWrapper(async (req, res) => {
       status: req.t("success"),
       message:
         numberOfRecyclables + " " + bootleType + " " + req.t("hasRecycled"),
+      data:balances,
     });
 });
 //getting all reylables STATS
@@ -67,5 +83,5 @@ export const removeRecyclables = asyncWrapper(async (req, res) => {
   RecyclablesStat.destroy();
   return res
     .status(200)
-    .json({ status: req.t("success"), message: req.t("removed") });
+    .json({ status: req.t("success"), message: req.t("removed"),data:RecyclablesStat });
 });

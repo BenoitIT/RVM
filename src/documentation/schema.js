@@ -137,4 +137,21 @@ export default {
       },
     },
   },
+  Balances: {
+    type: "object",
+    properties: {
+      id: {
+        type: "integer",
+        description: "The auto-generated id ",
+      },
+      userId:{
+        type: "integer",
+        description: "user id to recieve payments",
+      },
+      balance: {
+        type: "integer",
+        description: "remaining amount",
+      },
+    },
+  },
 };

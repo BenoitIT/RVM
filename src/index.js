@@ -8,6 +8,7 @@ import { authRoutes } from './Routes/authRoutes';
 import { machineRoutes } from './Routes/machine';
 import { googleAuth } from './Routes/googleAuth';
 import { Recycle } from './Routes/contribution';
+import { getPaidRoute } from './Routes/getPayed';
 const app = express();
 //configuring multiple languages
 i18next
@@ -31,6 +32,7 @@ app.use(middleware.handle(i18next));
 app.use('/api/rvm/users',authRoutes);
 app.use('/api/rvm/machines',machineRoutes);
 app.use('/api/rvm/recycle',Recycle);
+app.use('/api/rvm/getpaid',getPaidRoute);
 app.use(googleAuth);
 app.use(docs);
 //start the app
