@@ -145,4 +145,45 @@ export default {
       },
     },
   },
+  "/api/rvm/getpaid/getpaid": {
+    post: {
+      tags: ["Rewards"],
+      security: [
+        {
+          bearerAuth: [],
+        },
+      ],
+      parameters: [],
+    requestBody: {
+        content: {
+          "application/json": {
+            schema: {
+              $ref: "#/components/schemas/Balances",
+            },
+            example: {
+              transferredAmount:30,
+            },
+          },
+        },
+        required: true,
+      },
+      responses: {
+        200: {
+          description: "OK",
+        },
+        500: {
+          description: "Internal Server Error",
+        },
+        404: {
+          description: "not found",
+        },
+        401: {
+          description: "Not Authorized",
+        },
+        403: {
+          description: "Forbidden Access",
+        },
+      },
+    },
+  },
 };
