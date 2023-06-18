@@ -8,6 +8,7 @@ import machine from './machine';
 import schemas from './schema';
 import Recylables from './Recylables';
 import Rewards from './Rewards';
+import PasswordReset from './PasswordReset';
 import { Router } from 'express';
 const { serve, setup } = swagger;
 const swaggerDocRouter = Router();
@@ -62,7 +63,8 @@ const options = {
     ...operators,
     ...machine,
     ...Recylables,
-    ...Rewards
+    ...Rewards,
+    ... PasswordReset
    },
 };
 
