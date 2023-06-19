@@ -31,6 +31,10 @@ export default {
         type: "string",
         description: "user phone number",
       },
+      resetCode:{
+        type: "string",
+        description: "user reset code",
+      }
     },
   },
   Operators: {

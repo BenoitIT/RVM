@@ -34,6 +34,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      resetCode:{
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
