@@ -13,36 +13,37 @@ export const sendCode = asyncWrapper(async (req, res) => {
   const phoneNumber = req.body.phoneNumber;
   console.log(phoneNumber);
   const resetCode = generateRandomResetcode();
-  const code = await bcrypt.hash(resetCode, 10);
-  const user = await db.Users.findOne({
-    where: {
-      phoneNumber,
-    },
-  });
-  if (!user)
-    return res.status(404).json({
-      status: "failed",
-      message: "none registered with that phone number",
-    });
-  user.resetCode = code;
-  await user.save();
-  const message = await client.messages.create({
-    body: `your password reset key is ${resetCode}`,
-    from: process.env.TWILIO_PHONENUMBER,
-    to: `+25${phoneNumber}`,
-  });
-  if (message) {
-    return res.status(200).json({
-      status: "success",
-      message: "reset password sent to phone successfully",
-    });
-  }
-  if (!message) {
-    return res.status(200).json({
-      status: "failed",
-      message: "could not reach to the recipient",
-    });
-  }
+  console.log(resetCode);
+  // const code = await bcrypt.hash(resetCode, 10);
+  // const user = await db.Users.findOne({
+  //   where: {
+  //     phoneNumber,
+  //   },
+  // });
+  // if (!user)
+  //   return res.status(404).json({
+  //     status: "failed",
+  //     message: "none registered with that phone number",
+  //   });
+  // user.resetCode = code;
+  // await user.save();
+  // const message = await client.messages.create({
+  //   body: `your password reset key is ${resetCode}`,
+  //   from: process.env.TWILIO_PHONENUMBER,
+  //   to: `+25${phoneNumber}`,
+  // });
+  // if (message) {
+  //   return res.status(200).json({
+  //     status: "success",
+  //     message: "reset password sent to phone successfully",
+  //   });
+  // }
+  // if (!message) {
+  //   return res.status(200).json({
+  //     status: "failed",
+  //     message: "could not reach to the recipient",
+  //   });
+  // }
 });
 
 export const VerifyResetCode = asyncWrapper(async (req, res) => {
