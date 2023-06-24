@@ -2,7 +2,7 @@ import db from "../../database/models";
 import bcrypt from "bcrypt";
 import dotenv from "dotenv";
 import { asyncWrapper } from "../../utilities/BetterCodingPractice/handlingTryCatch";
-import { generateRondomRestcode } from "../../utilities/BetterCodingPractice/generateCodes";
+import { generateRandomResetcode } from "../../utilities/BetterCodingPractice/generateCodes";
 import { comparePassword } from "../../utilities/validations/handlingPasswordVerification";
 dotenv.config();
 const accountSid = process.env.TWILIO_ACCOUNTID;
@@ -11,7 +11,8 @@ const client = require("twilio")(accountSid, authToken);
 
 export const sendCode = asyncWrapper(async (req, res) => {
   const phoneNumber = req.body.phoneNumber;
-  const resetCode = generateRondomRestcode();
+  console.log(phoneNumber);
+  const resetCode = generateRandomResetcode();
   const code = await bcrypt.hash(resetCode, 10);
   const user = await db.Users.findOne({
     where: {
